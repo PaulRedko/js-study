@@ -9,7 +9,7 @@ what is the limit?
 
 typeof <smth> - operator to check the type of data. you dont need to use paranthes. 
 
-cancadnating - combining two strings. 
+concatenating - combining two strings. 
 
 strings are indexed. Every letter has its number, and the row starts with 0. 
 
