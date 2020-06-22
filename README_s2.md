@@ -7,7 +7,6 @@ Key JS concepts:
 2. 5 JS primitive data types
 3. define and write var or variables: used to store things
 4. write code with the use of console.log, alert, prompt
-5. ??
 
 Primitive Datatypes: numbers, string (words), booleans, undefined, null.
 
@@ -34,35 +33,7 @@ V2:
 .2 change the value:  age = age - 1
 V3: Reserved words for variables: let, document, var, 
 V4: there is a convention to use camel cases for variable. 
-V5: it is impossible to redeclare a variable. the variable can be changed only without var/let: age = age +1 or age += 1;
-
-var yourVariableName = yourValue;
-
-JS Methods: 
-//alert - popup a message to user.
-//prompt - collect data from user. 
-var userName = prompt("what is your user name?")
-//console.log - message to console
-//clear() - clear console
-two slashes are comments in JS. Commands after them will not be executed. 
-
-Objectives: 
-1. evaluate complex logical expressions.
-2. write three part conditional statements: with if logic
-3. write JS While loops and For loops
-4. translate from For to White loop or vice versa
-
-Boolean logic:
-true == "1" // true
-0 == false // true
-null == undefined // true
-NaN == NaN // false
-
-Logical operators: 
-AND &&
-OR ||
-NOT ! 
-
-Truthy or falsey valuse
-Falsy: false; 0; ""; null; undefined; NaN.
-all the reset is Truthy.
+V5: it is impossible to redeclare a variable. the variable can be changed only without var/let: age = age +1 or age += 1; it can be 
+V6: unitary operator: score++; score--;
+V7: const - always constant value/variable, it is used to show and to know that it does not change in comparison with 'let'.  
+V8 var: was used to define variables. var yourVariableName = yourValue; it is similar to 'let'. Better to use let, not var, which is an old way of using things.  
