@@ -65,6 +65,8 @@ switch(day) {
    case 7: console.log("SUNDAY"); break;
    default: console.log("INVALID DAY"); break;
 }// output: MONDAY.
+break is used to stop the code from running. 
+
 Ternary operator: 
 possibility to use shortcuts for IF statements in JS
 Ternary is a term for three peases, and we have three parts in it
@@ -72,27 +74,4 @@ Condition ? expIfTrue : expIfFalse
 let status = "online";
 let color = status === "online" ? "green" : "red"
 
-
-Boolean logic:
-true == "1" // true
-0 == false // true
-null == undefined // true
-NaN == NaN // false
-
-Logical operators: 
-AND &&
-OR ||
-NOT ! 
-
-Truthy or falsey valuse
-Falsy: false; 0; ""; null; undefined; NaN.
-all the reset is Truthy.
-
-JS Methods: 
-//alert - popup a message to user.
-//prompt - collect data from user. 
-var userName = prompt("what is your user name?")
-//console.log - message to console
-//clear() - clear console
-two slashes are comments in JS. Commands after them will not be executed. 
 
