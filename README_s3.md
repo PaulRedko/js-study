@@ -29,9 +29,9 @@ stings are immutable. So with sting methods acutal stings don't change.
 use MDN website to check correct use of the methods.
 msg.toLocalUpperCase()
 .trim - removes spaces before and after the quotes in a sting.
-.indexOf(arg) -> 
+.indexOf(arg) -> shows the place of an argument. If requested arg is not in the variable, it returns -1. 
 let tvShow = "ChasTime";
-tvShow.indexOf("Time"); 
+tvShow.indexOf("Time"); //
 this method is case sensitve. 
 if there is no such letter in the string it retund -1.
 .slice()
@@ -55,7 +55,7 @@ Null / underfined
 Null: intentional absense of smth, when you tell that it is nothing.
 Undefined: does not have the value assigned to variable. 
 
-Math Object:
+Math Objects:
 Math.PI
 Math.round(1.9) // 2
 Math.floor(1.2324) // 1 
@@ -63,19 +63,5 @@ Math.pow(7,2) // 49
 Math.floor(Math.random() * 205) + 1;
 
 parseInt - it converts numbered sting into integer. need to use with all numbers. it selects numbers from beginining. 
-parseFloat - it converts numbered sting whole decimal number 
+parseFloat - it converts numbered sting to a decimal number 
 
-Boolean logic:
-true == "1" // true
-0 == false // true
-null == undefined // true
-NaN == NaN // false
-
-Logical operators: 
-AND &&
-OR ||
-NOT ! 
-
-Truthy or falsey valuse
-Falsy: false; 0; ""; null; undefined; NaN.
-all the reset is Truthy.
