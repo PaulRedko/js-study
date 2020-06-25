@@ -1,123 +1,40 @@
-// // Exmaple 2
-// let rating = 4; 
+// let animals = ["shark", "salmon", "whale", "bear", "lizard","tortoise"];
+// animals.splice(5,1,"tiger","aligator");
 
-// if (rating === 3) {
-//     console.error("you are a superstar!!")    
-//     } else {console.error("go fuck yourself!")
-//     }
+// let numbers = [12,78,1121,541,]
 
-// // Exmaple 3
-// let num = 23;
-// if (num % 2 !== 0) {
-//     console.log("it is odd")
-// } else {
-//     console.log("it is even")
-// }
+// console.log("  ******  ")
+// console.log("  ******  ")
+// console.log("  ******  ")
+// console.log("BIG ANIMALS LIST!")
+// console.log("  ******  ")
+// console.log(animals.reverse().join(" - "))
+// console.log(numbers.join(" - "))
+// console.log("  ******  ")
 
-// Example 4
-// // // let webRating = 92;
-// // // if (webRating >= 70 && webRating <= 100) {
-// // //     console.log("Your performance is good")
-// // // } 
-// // // else if (webRating <= 69 && webRating >= 50){
-// // //     console.log("You need improvement")
-// // // }
-// // // else if (webRating >= 1 && webRating <=49) {
-// // //         console.log("this is impossible!")
-// // //     } 
-// // // else {
-// // //     console.log("invalid rating!!!")}
+// let nums = [42];
+// let otherNums = nums; 
 
-// Example 5
+// console.log(nums,otherNums);
 
-// let highScore = 10; 
-// let userScore = 11; 
+const food = ["water", "milk", "bananas"];
+food.splice(0,0,"pork","floar")
+console.log(food.sort());
 
-// if (userScore >= highScore) {
-//     console.log(`Congrats, you have the new high score of ${userScore}`)
-//     highScore = userScore;
-// }
-// else {
-//     console.log(`Good game! Your score of ${userScore} did not bit the high score of ${highScore}`)
-// }
+const animalPairs = [
+	[ 'doe', [ 'buck', 'stag' ] ],
+	[ 'ewe', 'ram' ],
+	[ 'peahen', 'peacock' ]
+];
 
-// let password = "shitty day";
+//To access 'ewe'
+animalPairs[1][0];
 
-// if (password.length >= 7){
-//     if (password.indexOf(' ') === -1){
-//         console.log("Password is valid!")
-//     }
-//     else {        
-//         console.log("Password should not contain spaces, please adjust yours!")
-//     }
-// }
-// else {
-//     console.log("Invalid password!")
-// }
+//To access 'buck'
+animalPairs[0][1][0];
 
-// let num = 888; 
+//Updating a sub-array:
+animalPairs[0][1].push('hart');
+//apparently some people call male deer 'harts'.  idk.
 
-// if (num >= 1 && num <= 10){
-//     console.log("Valid Number!")
-// }
-// else {
-//     console.log("Pick a number in the range between 1 and 10")
-// }
-
-// let loggedInUser = "shiteater"; 
-// if (!loggedInUser) {
-//     alert("can you please login?")
-// }
-// else {
-//     alert("Welcome! You are logged in!")
-// }
-
-// let day = 66;
-
-// switch(day) {
-//     case 1: 
-//         console.log("Monday"); 
-//         break;
-//     case 2: 
-//         console.log("Tuesday");
-//         break;
-//     case 3: 
-//         console.log("Wednesday");
-//         break;
-//     case 4: 
-//         console.log("Thursday");
-//         break;
-//     case 5: 
-//         console.log("Friday");
-//         break;
-//     case 6: 
-//         console.log("Saturday");
-//         break;
-//     case 7: 
-//         console.log("Sunday");
-//         break;
-//         default:
-//             console.log("Invalid Day!")
-// }
-
-// let num = 2; 
-
-// // if (num === 2) {
-// //     console.log("you are lucky!")
-// // }
-// // else {
-// //     console.log("failure!")
-// // }
-
-// num === 2 ? console.log("you are lucky!") : console.log("failure!")
-
-// let status = "online";
-// let color = status === "offline" ? "red" : "green"
-
-let status = "offline";
-switch (status) {
-    case "online": console.log("green"); break;
-    case "offline": console.log("red"); break;
-    default:
-        console.log('We are unsure what you want!')
-   }
+animalPairs[2].splice(1,0,"peafowl");

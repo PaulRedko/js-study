@@ -1,6 +1,5 @@
 GOALS:
 Arrays 
-Objects
 Reference types
 Array/Object methods
 
@@ -12,11 +11,13 @@ Array are indexed same as strings. Every data value has it number from 0 to n.
 Arran can be done with sqare brackets [] and also passed data as new Array(1,2,3,1,"didko") 
 In comparison to the stings, arrays are mutable: they can be changed with different methods. 
 
+Arrays has 8 main methods: concat, indexOf, include, 
+
 EX:
 let students = ["Paul","22",14,"Sofia",null,NaN]
 students.length[0] // 'Paul'
 
-Modifyng arrays:
+Modifyng arrays: directly, when you know array length and value places. 
 let myShoppingList = ["Paper","Potato","Cheese","water"]
 myShoppingList[0] = 'Gas' // let myShoppingList = ["Gas","Potato","Cheese","water"]
 it is possible to change the item, in this case I need to know the item number in the row. 
@@ -53,4 +54,72 @@ reverse() - returns same array in a back order, and actually changes the order i
 slice - takes a portion of an array and creats a new array. But it does not delete the values in the initial array. We can use negative numbers to splice in reverse. 
 ex: let shopping = array3.slice(0,4) 
 
-splice - adds, removes, updates elements. usually in the middle of an array. 
+splice(startItem, deletCount, "insert item") - adds, inserts, removes, updates elements. usually in the middle of an array. 
+let addDeleteIndex = array.splice(startPlace[, deletCount[, item1[, item2[]]]])
+
+inserting/adding in the center of an array w/Splice
+let animals = ["shark", "salmon", "whale", "bear", "lizard","tortoise"];
+animals.splice(1,0,"pig");
+
+removing two first items w/Splice
+let animals = ["shark", "salmon", "whale", "bear", "lizard","tortoise"];
+animals.splice(0,2);
+
+replacing last item w/Splice
+let animals = ["shark", "salmon", "whale", "bear", "lizard","tortoise"];
+animals.splice(5,1,"tiger","aligator");
+
+SORT
+is good to arrange array items(strings) by name.
+but for numbers it is not possible to use, only with the use of functions. 
+
+REFERENCE TYPE VARIABLE 
+Value type variable - we create first when we save a primitive data type with a variable (let or const). In this case information is stored in memory, and it is only applicable for primitive data types. 
+
+let nums = 45;
+let otherNums = nums; 
+// nums -> 45
+// otherNums ->45
+
+nums= 44
+// nums -> 44
+// otherNums ->45 - still remains the same, because the number data is stored in memory.
+
+
+with Array storing is different. Variable when created, does not store data in memory, it stores the link/reference to the data in memory - it is called Reference Type Variable. 
+So in this case, when saving an array we save the link and reuse the link to the memory storage. 
+
+let nums = [45];
+let otherNums = nums;
+
+// nums -> [45]
+// otherNums ->[45]
+
+nums = [44]
+// nums -> [44]
+// otherNums -> [44] 
+
+CONST with Arrays
+it is impossible to change const variable. However it is possible to change the array created with const variable. I happens due to changing the data, not the reference. 
+
+const is used with arrays more often than let. 
+
+NESTED ARRAYS
+EX of nested array:
+const animalPairs = [
+	[ 'doe', [ 'buck', 'stag' ] ],
+	[ 'ewe', 'ram' ],
+	[ 'peahen', 'peacock' ]
+];
+
+//To access 'ram'
+animalPairs[1][1];
+
+//To access 'stag'
+animalPairs[0][1][1];
+
+//Updating a sub-array:
+animalPairs[0][1].push('hart');
+//apparently some people call male deer 'harts'.  idk.
+
+however the example with animalPairs is not really relevant, because in array the order of adding values is important. 
