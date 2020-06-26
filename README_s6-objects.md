@@ -36,3 +36,11 @@ Ex:
 const userReview = {}
 
 userReview['paulred11'] = 'good'
+
+Nested Objects
+we can nest objects under objects or mix them with arrays. 
+
+Comparing array/objects:
+it is not possible to directly compare two arrays, becuase the comparison is done based on their address, and not actual content. 
+
+First step is to compare two array length. it will be also possible to compare arrays with loops. 
