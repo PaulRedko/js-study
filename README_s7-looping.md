@@ -45,3 +45,80 @@ for (let i = 0; i < 11; i++) {
     console.log("   Inner loop:", j)
     };
 } 
+
+While Loops
+
+example:
+    let j = 6;
+    while(j > 0){
+        j-=2;
+        console.log("  ",j)
+
+while loops are used for games to allow working process till all live are used / spent. 
+
+while (livesLeft > 0)
+while (!gameOver)
+while (stillAlive)
+
+break; Can be used inside of loops to stop execution. 
++ it is not very common in For loops, because we already set how long should the loop run. 
++ if there are several nested loop, break stops only the loop where it is nested in.
+
+EX: for (let i = 0; i < 15; i++){
+    console.log(i);
+    if (i === 12){
+        break;
+    }
+}
+
+for... of Loop
+not supported in IE.
+
+for (variable of iterable) {
+    statement
+} 
+
+let subreddits = ['soccer', 'roku', 'streaming-TV', 'books']; 
+
+for(let i = 0; i < subreddits.length; i++) {
+    console.log(subreddits[i]);
+}
+
+// for ... of loop example
+for(let sub of subreddits) {
+    console.log(sub);
+}
+
+It is good for accessing arrays/objects. 
+'For... of' good in most cased, but when we need to access certain position of a string of an array. In this case conventional for loop works better.
+
+
+"For... of" with Objects
+
+it is not iterable, that is why we cannot apply same approach as in Array. 
+
+But we can loop over keys and values of an object. 
+
+Object.keys(movieReviews)
+Object.values(movieReviews)
+
+Ex:
+const movieReviews = {
+ Ameile: 7,
+ "Kill bill": 8,
+ "Die hard": 9,
+ "Home alone": 5, 
+ Alien: 9,
+ "Speed 5": 4,
+ "Scary movie": 5
+}
+
+for(let movie of Object.keys(movieReviews)) {
+    console.log(movie)
+}
+
+For... in Loop
+for(variable in object){
+    statement
+}
+It is usually used with objects, less convenient for arrays. 
