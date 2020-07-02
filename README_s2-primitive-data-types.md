@@ -1,4 +1,4 @@
-# js-study
+# Primitive Data Types
 
 ECMA - is the standards organisation, which updates JS. ECMAScript is the section and it has different version based on the year. 
 
@@ -22,18 +22,24 @@ Booleans: true / false
 
 Undefined: we set a var for age, but never add value. Like var age; And that is it no value added. 
 Null: 
-
 var currentPlayer = "paul"; 
 currentPlayer = null // game over for the player. 
 
 Variable: 
 V1: common concept for all programming languages, basically it is a container with name to store information. The idea here is not only to name, but also to store under clear naming the naming which has real sense. 
+
 V2: 
 .1 we add the value: var age = 22;
-.2 change the value:  age = age - 1
-V3: Reserved words for variables: let, document, var, 
-V4: there is a convention to use camel cases for variable. 
+.2 to change the value we apply do not use var/let (see v5 below):  age = age - 1
+
+V3: Reserved words for variables: let, document, var, const...
+
+V4: there is a convention to use camel cases for variable names. 
+
 V5: it is impossible to redeclare a variable. the variable can be changed only without var/let: age = age +1 or age += 1; it can be 
-V6: unitary operator: score++; score--;
+
+V6: unitary operators: score++; score--;
+
 V7: const - always constant value/variable, it is used to show and to know that it does not change in comparison with 'let'.  
-V8 var: was used to define variables. var yourVariableName = yourValue; it is similar to 'let'. Better to use let, not var, which is an old way of using things.  
+
+V8: var: was used to define variables. var yourVariableName = yourValue; it is similar to 'let'. Better to use let, not var, which is an old way of using things.  
