@@ -1,8 +1,6 @@
-
 // for (let i = 1; i <= 20; i+=5 ) {
 //     console.error(i,'-HELLO!')
 // }
-
 
 // for (let i = 100; i >= -7; i-=3 ) {
 //     console.log(i*i)
@@ -27,12 +25,12 @@
 // const myStudents = [
 //     {
 //        firstName: 'Paul',
-//        score: 99 
+//        score: 99
 //     },
 
 //     {
 //         firstName: 'John',
-//         score: 77 
+//         score: 77
 //      },
 //     {
 //         firstName: 'Patrick',
@@ -46,13 +44,13 @@
 // let total = 0;
 // for (let i = 0; i < myStudents.length; i++) {
 //     let student = myStudents[i];
-//     // console.log(`${student.firstName} scored: ${student.score}`); // and this is for objects.  
+//     // console.log(`${student.firstName} scored: ${student.score}`); // and this is for objects.
 //     total += student.score;
 // }
 // let stAv = total/myStudents.length;
 // console.log(stAv);
 
-// const word = 'stressed'; 
+// const word = 'stressed';
 // for (let i = 0; i < word.length; i++){
 //      console.log(word[i]);
 // };
@@ -62,7 +60,7 @@
 //     for(let j = 10; j >= 0; j -= 2){
 //     console.log("   Inner loop:", j)
 //     };
-// } 
+// }
 
 // const gameBoard = [
 //     [4,32,8,4],
@@ -77,10 +75,10 @@
 //     let row = gameBoard[i];
 //     for (let j = 0; j < row.length; j++){
 //         totalScore += row[j];
-        
+
 //     }
 // }
-// console.log(totalScore); 
+// console.log(totalScore);
 
 // for (let i = 0; i <= 6; i++){
 //     console.log(i);
@@ -91,8 +89,8 @@
 // }
 // }
 
-// i need to generat the random number from 1 to 9. 
-// i guess with the while loop 
+// i need to generat the random number from 1 to 9.
+// i guess with the while loop
 
 // const targetNumber = Math.floor(Math.random()*10);
 // let guessNumber = Math.floor(Math.random()*10);
@@ -100,12 +98,11 @@
 
 // while (guessNumber !== targetNumber) {
 //     console.log(`Target: ${targetNumber} Guess: ${guessNumber}`);
-//     guessNumber = Math.floor(Math.random()*10) 
+//     guessNumber = Math.floor(Math.random()*10)
 // }
 // repetition += guessNumber; // <---???
 // console.log("Repetitions: ", repetition);
 // console.log(`Target: ${targetNumber} Guess: ${guessNumber}`);
-
 
 // for (let i = 0; i < 15; i++){
 //     console.log(i);
@@ -125,7 +122,7 @@
 // }
 // console.log(`Target: ${targetNumber} Guess: ${guessNumber}`);
 
-// let subreddits = ['soccer', 'roku', 'streaming-TV', 'books']; 
+// let subreddits = ['soccer', 'roku', 'streaming-TV', 'books'];
 
 // for(let i = 0; i < subreddits.length; i++) {
 //     console.log(subreddits[i]);
@@ -153,7 +150,7 @@
 // let sum = 0;
 //     for(let j = 0; j < row.length; j++) {
 //         sum += row[j];
-        
+
 //     }
 //     console.log(`Row of ${row} is a sum of ${sum}`)
 // }
@@ -166,47 +163,46 @@
 //         sum += num;
 //     }
 //     console.log(`Row of ${row} is a sum of ${sum}`)
-//     sumTotal += sum; 
+//     sumTotal += sum;
 // }
 // console.log(sumTotal)
 
-
-// let subreddits1 = ['soccer', 'roku', 'streaming-TV', 'books']; 
-// let subreddits2 = ['poker', 'moku', 'CiVi', 'crooks']; 
+// let subreddits1 = ['soccer', 'roku', 'streaming-TV', 'books'];
+// let subreddits2 = ['poker', 'moku', 'CiVi', 'crooks'];
 // // for(let i = 0; i < subreddits1.length; i++) {
 // //     console.log(`${subreddits1[i]}-${subreddits2[i]}`);
 // // }
 
 // for(let sub1 of subreddits1 && let sub2 of subreddits2) {
-//     console.log(`${sub1}-${sub2}`);    
+//     console.log(`${sub1}-${sub2}`);
 // }
 
 const movieReviews = {
- Ameile: 2,
- "Kill bill": 8,
- "Die hard": 2,
- "Home alone": 5, 
- Alien: 9,
- "Speed 5": 10,
- "Scary movie": 6
-}
+  Ameile: 2,
+  "Kill bill": 8,
+  "Die hard": 2,
+  "Home alone": 5,
+  Alien: 9,
+  "Speed 5": 10,
+  "Scary movie": 6,
+};
 
 // for(let movie of Object.keys(movieReviews)) {
 //     console.log(movie, movieReviews[movie])
 // }
 
-// const ratings = Object.values(movieReviews) 
+// const ratings = Object.values(movieReviews)
 //     let total = 0;
 //     for(let r of ratings){
-//         total += r;   
+//         total += r;
 // }
-// let avr = total/ratings.length 
+// let avr = total/ratings.length
 //     console.log(avr)
 let total = 0;
 
-for(let movie in movieReviews){
-    console.log(movie, movieReviews[movie])
-        total += movieReviews[movie];
+for (let movie in movieReviews) {
+  console.log(movie, movieReviews[movie]);
+  total += movieReviews[movie];
 }
-let avr = total/movieReviews[movie].length;
+let avr = total / movieReviews[movie].length;
 console.log(total, avr);

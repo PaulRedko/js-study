@@ -39,7 +39,6 @@
 //     return x/y
 // }
 
-
 // Write a isValidPassword function
 // It accepts 2 arguments: password and username
 // Password must:
@@ -55,15 +54,39 @@
 
 //declare
 function isValidPassword(pass, userName) {
-    // if(pass.length < 8) {return false};
-    // if(pass.indexOf(' ') !== -1) {return false};
-    // if(pass.indexOf(userName) !== -1){ return false}
-    // return true;
-    // }
+  // SOLUTION 1 //
+  // if(pass.length < 8) {return false};
+  // if(pass.indexOf(' ') !== -1) {return false};
+  // if(pass.indexOf(userName) !== -1){ return false}
+  // return true;
+  // }
 
-    if((pass.length < 8) || (pass.indexOf(' ') !== -1) || (pass.indexOf(userName)) 
-    {return false};
-    return true;
-    }
+  // SOLUTION 2 //
+  //   if (
+  //     pass.length < 8 ||
+  //     pass.indexOf(' ') !== -1 ||
+  //     pass.indexOf(userName) !== -1
+  //   ) {
+  //     return false;
+  //   }
+  //   return true;
+  // }
+
+  // SOLUTION 3  - VARIABLES //
+  //   const tooShort = pass.length < 8;
+  //   const hasSpace = pass.indexOf(' ') !== -1;
+  //   const similaName = pass.indexOf(userName) !== -1;
+  //   if (tooShort || hasSpace || similaName) return false;
+  //   return true;
+  // }
+
+  // SOLUTION 3.2  - VARIABLES //
+  const tooShort = pass.length < 8;
+  const hasSpace = pass.indexOf(' ') !== -1;
+  const similaName = pass.indexOf(userName) !== -1;
+  if (!tooShort && !hasSpace && !similaName) return true;
+  return false;
+}
+
 //run
-isValidPassword('PbaPas!321','PbaPas!321');
+isValidPassword('PbaPas!321', 'PbaPas!321');

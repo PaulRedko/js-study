@@ -13,18 +13,18 @@
 // console.log("  ******  ")
 
 // let nums = [42];
-// let otherNums = nums; 
+// let otherNums = nums;
 
 // console.log(nums,otherNums);
 
 const food = ["water", "milk", "bananas"];
-food.splice(0,0,"pork","floar")
+food.splice(0, 0, "pork", "floar");
 console.log(food.sort());
 
 const animalPairs = [
-	[ 'doe', [ 'buck', 'stag' ] ],
-	[ 'ewe', 'ram' ],
-	[ 'peahen', 'peacock' ]
+  ["doe", ["buck", "stag"]],
+  ["ewe", "ram"],
+  ["peahen", "peacock"],
 ];
 
 //To access 'ewe'
@@ -34,7 +34,7 @@ animalPairs[1][0];
 animalPairs[0][1][0];
 
 //Updating a sub-array:
-animalPairs[0][1].push('hart');
+animalPairs[0][1].push("hart");
 //apparently some people call male deer 'harts'.  idk.
 
-animalPairs[2].splice(1,0,"peafowl");
+animalPairs[2].splice(1, 0, "peafowl");
