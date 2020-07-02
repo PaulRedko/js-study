@@ -1,26 +1,21 @@
-Boolean: 
-just words true / false. No quotes needed to show booleans.
+# Booleans, Strings, String Methods, Null and Math
+
+Booleans: 
++ just words true / false. 
++ No quotes needed to show booleans.
 
 In JS booleans can change type in variable: from number to boolean or string. it is not a good idea and many programmers do not like it due to this fact. 
 
-String:
-we wrap them in quotes. 
-what is the limit?
+Strings:
++ we wrap them in quotes. what is the limit of a string?
++ strings can concatenate - combining two strings in one. 
++ strings are indexed. Every letter has its number, and the row starts with 0. 
++ property: every sting has a property.  "hello".length // 5 - it gives the number of letter in the sting. 
++ if i want to select certain letter in the string i use square brackets [], and identify which letter to use. 
++ undefined - means that there is no such data in a string.
++ it is not possible to change one letter in a sting. 
 
-typeof <smth> - operator to check the type of data. you dont need to use paranthes. 
-
-concatenating - combining two strings. 
-
-strings are indexed. Every letter has its number, and the row starts with 0. 
-
-property: every sting has a property. 
-"hello".length // 5 - it gives the number of letter in the sting. 
-
-if i want to select certain letter in the string i use square brackets [], and identify which letter to use. 
-
-undefined - means that there is no such data in a string.
-
-it is not possible to change one letter in a sting. 
+typeof <smth> - operator to check the type of data. You dont need to use paranthes. 
 
 STING METHODS:
 sting.method() - we need to have closing brackets, without 
@@ -45,7 +40,7 @@ String escape characters or escape notations:
 \\ -> returns one backslash
 
 String embeded expressions:
-`` - backticks and `${}` (dollar sign and curly brackets)
+backticks make `${}` (dollar sign and curly brackets in backticks. Operation or variable can work in curly brackets)
 `you owe me ${100+223}`
 let animal = 'pig'
 let sound = 'oink'
