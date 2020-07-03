@@ -52,41 +52,81 @@
 // isValidPassword('dogLuvr123!', 'dogLuvr') //false
 // isValidPassword('hello1', 'dogLuvr') //false
 
-//declare
-function isValidPassword(pass, userName) {
-  // SOLUTION 1 //
-  // if(pass.length < 8) {return false};
-  // if(pass.indexOf(' ') !== -1) {return false};
-  // if(pass.indexOf(userName) !== -1){ return false}
-  // return true;
-  // }
+// //declare
+// function isValidPassword(pass, userName) {
+//   // SOLUTION 1 //
+//   // if(pass.length < 8) {return false};
+//   // if(pass.indexOf(' ') !== -1) {return false};
+//   // if(pass.indexOf(userName) !== -1){ return false}
+//   // return true;
+//   // }
 
-  // SOLUTION 2 //
-  //   if (
-  //     pass.length < 8 ||
-  //     pass.indexOf(' ') !== -1 ||
-  //     pass.indexOf(userName) !== -1
-  //   ) {
-  //     return false;
-  //   }
-  //   return true;
-  // }
+//   // SOLUTION 2 //
+//   //   if (
+//   //     pass.length < 8 ||
+//   //     pass.indexOf(' ') !== -1 ||
+//   //     pass.indexOf(userName) !== -1
+//   //   ) {
+//   //     return false;
+//   //   }
+//   //   return true;
+//   // }
 
-  // SOLUTION 3  - VARIABLES //
-  //   const tooShort = pass.length < 8;
-  //   const hasSpace = pass.indexOf(' ') !== -1;
-  //   const similaName = pass.indexOf(userName) !== -1;
-  //   if (tooShort || hasSpace || similaName) return false;
-  //   return true;
-  // }
+//   // SOLUTION 3  - VARIABLES //
+//   //   const tooShort = pass.length < 8;
+//   //   const hasSpace = pass.indexOf(' ') !== -1;
+//   //   const similaName = pass.indexOf(userName) !== -1;
+//   //   if (tooShort || hasSpace || similaName) return false;
+//   //   return true;
+//   // }
 
-  // SOLUTION 3.2  - VARIABLES //
-  const tooShort = pass.length < 8;
-  const hasSpace = pass.indexOf(' ') !== -1;
-  const similaName = pass.indexOf(userName) !== -1;
-  if (!tooShort && !hasSpace && !similaName) return true;
-  return false;
+//   // SOLUTION 3.2  - VARIABLES //
+//   const tooShort = pass.length < 8;
+//   const hasSpace = pass.indexOf(' ') !== -1;
+//   const similaName = pass.indexOf(userName) !== -1;
+//   if (!tooShort && !hasSpace && !similaName) return true;
+//   return false;
+// }
+
+// //run
+// isValidPassword('PbaPas!321', 'PbaPas!321');
+
+// comment on multiple solutions. We have more than three types of solutions. All of them are valid and working and good.
+// Firstly and the most importantly, we need to consider not the shortest solution, but the most clear in terms of what is happening.
+
+// function average(array) {
+//   let aveSum = 0;
+//   for (let i = 0; i <= array.length; i++) {
+//     aveSum += i;
+//     // aveResult = aveSum / array.length;
+//     // return aveResult;
+//   }
+//   let aveResult = aveSum / array.length;
+//   return aveResult; // not working
+// }
+
+// run
+// average([1, 23, 12]);
+
+// let total = 0;
+// function ave(arr) {
+//   for (let n of arr) {
+//     total += n;
+//   }
+//   return total / arr.length;
+// }
+// run
+// ave([1, 23, 12]); // 12 works correctly.
+
+// pangram - a sentance that contains all letters of alfabet.
+// ex: the five boxing wizards jump quickly.
+
+function isPangram(sentence) {
+  let lowerCased = sentence.toLowerCase();
+  for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+    if (lowerCased.indexOf(char) === -1) {
+      return false;
+    }
+  }
+  return true;
 }
-
-//run
-isValidPassword('PbaPas!321', 'PbaPas!321');
