@@ -121,12 +121,95 @@
 // pangram - a sentance that contains all letters of alfabet.
 // ex: the five boxing wizards jump quickly.
 
-function isPangram(sentence) {
-  let lowerCased = sentence.toLowerCase();
-  for (let char of 'abcdefghijklmnopqrstuvwxyz') {
-    if (lowerCased.indexOf(char) === -1) {
-      return false;
-    }
-  }
-  return true;
+// function isPangram(sentence) {
+//   let lowerCased = sentence.toLowerCase();
+//   for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+//     if (lowerCased.indexOf(char) === -1) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// function isPangram(sentence) {
+//   let lowerCased = sentence.toLowerCase();
+//   for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+//     if (!lowerCased.includes(char)) {
+//       // this solution make the code cleaner.
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// V1 getCard() function - myapproach
+// write getCard() function which returns a random playing card object.
+// let value = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+// let suit = ['clubs', 'spades', 'hearts', 'dimonds'];
+// function getCard() {
+//   for (let oneValue of value) {
+//     console.log(oneValue);
+//   }
+//   for (let oneSuit of suit) {
+//   }
+// }
+
+// return getCard() {
+//   value: oneValue,
+//   suit: oneSuit
+// };
+
+// V2 getCArd() from Colt
+// function getCard() {
+//   const values = [
+//     '2',
+//     '3',
+//     '4',
+//     '5',
+//     '6',
+//     '7',
+//     '8',
+//     '9',
+//     '10',
+//     'J',
+//     'Q',
+//     'K',
+//     'A',
+//   ];
+//   const idx = Math.floor(Math.random() * values.length);
+//   const value = values[idx];
+//   const suits = ['clubs', 'spades', 'hearts', 'dimonds'];
+//   const idy = Math.floor(Math.random() * suits.length);
+//   const suit = suits[idy];
+//   return {
+//     value: value,
+//     suit: suit,
+//   };
+// }
+// V3 from Colt - VERSION TWO getCard() - code review
+
+function pick(arr) {
+  // return random element from arr.
+  const idx = Math.floor(Math.random() * arr.length);
+  return arr[idx];
+}
+
+function getCard() {
+  const values = [
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    'J',
+    'Q',
+    'K',
+    'A',
+  ];
+  const suits = ['clubs', 'spades', 'hearts', 'dimonds'];
+  return { value: pick(values), suit: pick(suits) };
 }
