@@ -188,28 +188,127 @@
 // }
 // V3 from Colt - VERSION TWO getCard() - code review
 
-function pick(arr) {
-  // return random element from arr.
-  const idx = Math.floor(Math.random() * arr.length);
-  return arr[idx];
-}
+// function pick(arr) {
+//   // return random element from arr.
+//   const idx = Math.floor(Math.random() * arr.length);
+//   return arr[idx];
+// }
 
-function getCard() {
-  const values = [
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    'J',
-    'Q',
-    'K',
-    'A',
-  ];
-  const suits = ['clubs', 'spades', 'hearts', 'dimonds'];
-  return { value: pick(values), suit: pick(suits) };
+// function getCard() {
+//   const values = [
+//     '2',
+//     '3',
+//     '4',
+//     '5',
+//     '6',
+//     '7',
+//     '8',
+//     '9',
+//     '10',
+//     'J',
+//     'Q',
+//     'K',
+//     'A',
+//   ];
+//   const suits = ['clubs', 'spades', 'hearts', 'dimonds'];
+//   return { value: pick(values), suit: pick(suits) };
+// }
+
+// FUNCTION EXPRESSIONS - FUNCTIONS ARE OBJECTS
+// const square = function (num) { // function expression
+//   return num * num;
+// };
+// square();
+
+// function power(n) { // function statement
+//   return n * n;
+// }
+// power();
+
+// function add(x, y) {
+//   return x + y;
+// }
+// const substract = function (x, y) {
+//   return x - y;
+// };
+// function multiply(x, y) {
+//   return x * y;
+// }
+// const divide = function (x, y) {
+//   return x / y;
+// };
+
+// const operate = [add, substract, multiply, divide];
+// function oper() {
+//   for (let func of operate) {
+//     let result = func();
+//     console.log(result);
+//   }
+// }
+// oper();
+
+// FUNCTION AS AN ARGUMENT
+// function cryThreeTimes(f) {
+//   f();
+//   f();
+//   f();
+// }
+
+// function cry(callback) {
+//   console.log('Iam so sad!!!');
+//   callback(); // callback here allows to accept argumetns for the cry function, and in this case cry(rage) will implement.
+// }
+// function rage() {
+//   console.log('I hate you all!!!');
+// }
+
+// // FUNCTION AS A RETURN VALUE
+// function multiplyBy(num) {
+//   return function (x) {
+//     return x * num;
+//   };
+// }
+// const triple = function (x) {
+//   return x * 3;
+// };
+// triple(6);
+
+// function makeBetweenFunc(x, y) {
+//   return function (num) {
+//     return num >= x && num <= y;
+//   };
+// }
+
+// makeBetweenFunc(3, 15);
+// const isChild = function (num) {
+//   return num >= 3 && num <= 15;
+// };
+
+// isChild(17);
+
+// function callTwice(callback) {
+//   // this way function accepts callbacks.
+//   callback();
+//   callback();
+// }
+
+// function laugh() {
+//   console.log('hahahahahahahahhah!');
+// }
+
+// callTwice(laugh);
+
+function grumpus() {
+  alert("Go AWay!!! Otebites'");
 }
+// setTimeout(grumpus, 9000);
+
+// setTimeout(function () {
+//   // in this case we add anonymous function, because we do not plan to repeat it somewhere.
+//   alert('welcome!');
+// }, 2000);
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', function () {
+  alert('Why havae you clicked me!!??');
+});
