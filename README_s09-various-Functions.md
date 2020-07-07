@@ -1,4 +1,4 @@
-#Advanced Functions and Variables
+# Advanced Functions and Variables
 
 - Scope
 - Higher Order Functions
