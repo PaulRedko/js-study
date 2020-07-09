@@ -105,21 +105,117 @@
 
 // const doubles
 
-const nums = [1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9];
-const triples = nums.map(function (n) {
-  return n * 3;
+// const nums = [1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9];
+// const triples = nums.map(function (n) {
+//   return n * 3;
+// });
+
+// const triples1 = nums.map((n) => n * 3);
+
+// const parityLIst = nums.map(function (n) {
+//   if (n % 2 === 0) return 'even';
+//   return 'odd';
+// });
+// const parityLists2 = nums.map((n) => {
+//   if (n % 2 === 0) return 'even';
+//   return 'odd';
+// });
+
+// const parityList3 = nums.map((n) => (n % 2 === 0 ? 'even' : 'odd'));
+// // ternary operator
+
+// // FINDS OPERATOR
+// let movies = [
+//   'Terminator Die',
+//   'Die hard',
+//   'Hangover',
+//   'Mrs. Doubtfire',
+//   'Mr. Deeds',
+// ];
+
+// const movie = movies.find((movie) => {
+//   return movie.includes('Terminator');
+// });
+
+// const movie2 = movies.find((m) => m.indexOf('Die') === 8);
+
+const nums = [8, 7, 8, 9, 2, 3, 4, 5, 6, 7, 9, 1, 2, 5];
+const odds = nums.filter((n) => {
+  return n % 2 === 1;
+});
+const odds2 = nums.filter((n) => n % 2 === 1);
+const evens = nums.filter((n) => n % 2 === 0);
+const bigNums = nums.filter((n) => n > 5);
+
+const books = [
+  {
+    title: 'Good Omens',
+    authors: ['Terry Pratchett', 'Neil Gaiman'],
+    rating: 4.25,
+    genres: ['fiction', 'fantasy'],
+  },
+  {
+    title: 'Changing My Mind',
+    authors: ['Zadie Smith'],
+    rating: 3.83,
+    genres: ['nonfiction', 'essays'],
+  },
+  {
+    title: 'Bone: The Complete Edition',
+    authors: ['Jeff Smith'],
+    rating: 4.42,
+    genres: ['fiction', 'graphic novel', 'fantasy'],
+  },
+  {
+    title: 'American Gods',
+    authors: ['Neil Gaiman'],
+    rating: 4.11,
+    genres: ['fiction', 'fantasy'],
+  },
+  {
+    title: 'A Gentleman in Moscow',
+    authors: ['Amor Towles'],
+    rating: 4.36,
+    genres: ['fiction', 'historical fiction'],
+  },
+  {
+    title: 'The Name of the Wind',
+    authors: ['Patrick Rothfuss'],
+    rating: 4.54,
+    genres: ['fiction', 'fantasy'],
+  },
+  {
+    title: 'The Overstory',
+    authors: ['Richard Powers'],
+    rating: 4.19,
+    genres: ['fiction', 'short stories'],
+  },
+  {
+    title: 'The Way of Kings',
+    authors: ['Brandon Sanderson'],
+    rating: 4.65,
+    genres: ['fantasy', 'epic'],
+  },
+  {
+    title: 'Lord of the flies',
+    authors: ['William Golding'],
+    rating: 3.67,
+    genres: ['fiction'],
+  },
+];
+
+const goodBooks = books.filter((n) => {
+  return n.rating > 4.3;
 });
 
-const triples1 = nums.map((n) => n * 3);
+const fantacy = books.filter((f) => f.genres.includes('fantasy'));
+const shortForm = books.filter(
+  (short) =>
+    short.genres.includes('short stories') || short.genres.includes('essays')
+);
 
-const parityLIst = nums.map(function (n) {
-  if (n % 2 === 0) return 'even';
-  return 'odd';
+const query = 'OF';
+const results = books.filter((q) => {
+  const title = q.title.toLowerCase();
+  return title.includes(query.toLowerCase());
 });
-const parityLists2 = nums.map((n) => {
-  if (n % 2 === 0) return 'even';
-  return 'odd';
-});
-
-const parityList3 = nums.map((n) => (n % 2 === 0 ? 'even' : 'odd'));
-// ternary operator

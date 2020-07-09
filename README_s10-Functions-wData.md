@@ -71,3 +71,32 @@ n \* n
   const square = (n) => n \* n;
 - in the above case we add parenthies to show that whole array or expression are connected to the function expression. Parenthes are used to show grouping or connection.
 - if there are several expressions in parenthes, js will not know what to return, hence we need to specify.
+
+find()
+
+- find method finds and sends back the requested value. If there are several same values in the array it sends only the first one.
+- find works the same way as for loop, it checks every value till finds the requested value.
+- find is good to find based on ID. Like deleting a certain post.
+
+let movies = [
+'Die hard',
+'Die hard 2',
+'Terminator',
+'Hangover',
+'Mrs. Doubtfire',
+'Mr. Deeds',
+];
+
+const movie = movies.find((movie) => {
+return movie.includes('Terminator');
+});
+
+filter()
+
+- creates a copy of an array values based on a given requiremnts/filter.
+- it filters through an array arr.filter( specified function of filtering)
+
+const nums = [8, 7,8,9,2,3,4,5,6,7,9,1,2]
+const odds = nums.filter( n => {
+return n % 2 === 1;
+})
