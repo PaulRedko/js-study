@@ -114,7 +114,7 @@ isChild(17);
 
 Callback Functions
 
-- a callback function is a function passed into another function as an argumetn, which is than invoked inside the outer function.
+- a callback function is a function passed into another function as an argument, which is than invoked inside the outer function.
 - there are build in functions that require to pass arguments:
   Ex1:
   function grumpus(){
