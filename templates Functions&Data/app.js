@@ -197,12 +197,25 @@ const books = [
     genres: ['fantasy', 'epic'],
   },
   {
+    title: 'A Trully Horible Book',
+    authors: ['Xavier Time'],
+    rating: 2.35,
+    genres: ['fiction'],
+  },
+  {
     title: 'Lord of the flies',
     authors: ['William Golding'],
     rating: 3.67,
     genres: ['fiction'],
   },
 ];
+
+const groupedBooks = books.reduce((groupedBook, book) => {
+  const key = Math.floor(book.rating);
+  if (!groupedBook[key]) groupedBook[key] = [];
+  groupedBook[key].push(book);
+  return groupedBook;
+}, {});
 
 // const goodBooks = books.filter((n) => {
 //   return n.rating > 4.3;
@@ -283,11 +296,28 @@ const votes = [
   'n',
   'y',
 ];
-const results = votes.reduce((tally, val) => {
-  if (tally[val]) {
-    tally[val]++;
-  } else {
-    tally[val] = 1;
-  }
-  return tally;
-}, {});
+// const results = votes.reduce((tally, currentVal) => {
+//   if (tally[currentVal]) {
+//     tally[currentVal]++;
+//   } else {
+//     tally[currentVal] = 1;
+//   }
+//   return tally;
+// }, {});
+
+const results = votes.reduce((tally, currentVal) => {
+  tally[currentVal] = (tally[currentVal] || 0) + 1; // shortened way, if something does not exist, set it to one or add.
+
+  // if (tally[currentVal] < 1) {
+  //   tally[currentVal] = 1;
+  // } else {
+  //   tally[currentVal]++;
+  // }
+  return tally; // we return resulting object
+  //   if (tally[currentVal]) {
+  //     // this part runs if we have at least one record. So it is not run on the first round.
+  //     tally[currentVal]++;
+  //   } else {
+  //     tally[currentVal] = 1; // this part runs on the first round to make first record.
+  //   }
+}, {}); // our initial value is an empty object.
