@@ -1,6 +1,6 @@
 # Apply Functions to Collections of Data
 
-Array Callback Methods
+Array Callback/Build-in Methods
 
 - callback functions are essential for JS and they are widely used.
 
@@ -100,3 +100,56 @@ const nums = [8, 7,8,9,2,3,4,5,6,7,9,1,2]
 const odds = nums.filter( n => {
 return n % 2 === 1;
 })
+
+Every and Some
+
+- boolean methods
+- every verifies if all values have same criteria? If they have, it returns true, if one does not have - false.
+
+const words = ['dog', 'cat', 'dig', 'rat', 'log','bag', 'wag'];
+
+const is3Letters = words.every(w => w.length() === 3 );
+
+- some - checks the same, but returns true if there is at least one element that has the feature.
+
+words.some(word => word[0] === 'c');
+
+- in arrays .length is a property (does not need parenthies for an argument) the rest are array methods.
+
+Sort // arr.sort(compareFunc(a,b))
+
+- if compareFunc(a,b) returns less than 0 - sort a before b.
+- if compareFunc(a,b) returns 0 - leave unchanged order.
+- if compareFunc(a,b) returns more than 0 - sort b before a.
+
+* converts all array values into strings and arrange them alfabetically by the first number (not actual value).
+* to add actual comparison we can pass function compare(a,b) and specify the method of comparison. If a - b = ascending order; b - a = descending order. Equal values will not change
+* sort changes the order in an array. Once we apply two contrary functions as below they refer to the last saved array, which has descending order. We need to add slice() method, so that create a different array.
+
+const prices = [20, 50, 33, 799, 14, 900, 3120, 1450,3]
+prices.sort()
+const ascSort = prices.slice().sort((a, b) => a - b);
+const descSort = prices.slice().sort((a, b) => b - a);
+
+const ranking = books.sort((a, b) => a.rating - b.rating); // we refer to exact place (rating value) in the objects of the array.
+
+reduce()
+
+- build in array method, as all in this section
+- this method takes an array of values and reduces them to a single value (max value, min value)
+- it is called reduce because we boiling down/reducing to the first parameter - accumulator.
+
+[3,5,7,9,11].reduce((accumulator, currentValue) => {
+return accumulator + currentValue;
+}, 10) // if passing the number at the end(second argument), total will add to the number.
+
+Callback // Accum // CurrentValue // return
+firstCall // 3 // 5 // 8 // on the first call it passes first current value first
+secondCall// 8 // 7 // 15
+thirdCall // 15 // 9 // 24
+fourthCall // 24 // 11 // 35
+
+Reduce for Tallying (podschet, or counting)
+
+- we can count number of votes or items in the strings.
+- we use reduce and add compare and add logic: is this item already in the list? if yes, add one and return total, if not, add one.
