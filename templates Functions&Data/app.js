@@ -139,13 +139,13 @@
 
 // const movie2 = movies.find((m) => m.indexOf('Die') === 8);
 
-const nums = [8, 7, 8, 9, 2, 3, 4, 5, 6, 7, 9, 1, 2, 5];
-const odds = nums.filter((n) => {
-  return n % 2 === 1;
-});
-const odds2 = nums.filter((n) => n % 2 === 1);
-const evens = nums.filter((n) => n % 2 === 0);
-const bigNums = nums.filter((n) => n > 5);
+// const nums = [8, 7, 8, 9, 2, 3, 4, 5, 6, 7, 9, 1, 2, 5];
+// const odds = nums.filter((n) => {
+//   return n % 2 === 1;
+// });
+// const odds2 = nums.filter((n) => n % 2 === 1);
+// const evens = nums.filter((n) => n % 2 === 0);
+// const bigNums = nums.filter((n) => n > 5);
 
 const books = [
   {
@@ -204,18 +204,90 @@ const books = [
   },
 ];
 
-const goodBooks = books.filter((n) => {
-  return n.rating > 4.3;
+// const goodBooks = books.filter((n) => {
+//   return n.rating > 4.3;
+// });
+
+// const fantacy = books.filter((f) => f.genres.includes('fantasy'));
+// const shortForm = books.filter(
+//   (short) =>
+//     short.genres.includes('short stories') || short.genres.includes('essays')
+// );
+
+// const query = 'OF';
+// const results = books.filter((q) => {
+//   const title = q.title.toLowerCase();
+//   return title.includes(query.toLowerCase());
+// });
+
+// const words = ['dog', 'cat', 'dig', 'rag', 'log', 'bag', 'wag'];
+
+// const is3Letters = words.every((w) => w.length === 3);
+
+// const allEndsG = words.every((word) => {
+//   const last = word.length - 1;
+//   return word[last] === 'g';
+// });
+// const cLetter = words.some((word) => word[0] === 'c');
+// const allCLetter = words.every((word) => word[0] === 'c');
+
+// const allGoodBooks = books.some((g) => {
+//   return g.rating > 4.7;
+// });
+
+// const any2Authors = books.some((book) => book.authors.length === 2);
+
+// SORT
+// const prices = [20, 50, 33, 799, 14, 900, 3120, 1450, 3.99];
+
+// const badSort = prices.slice().sort();
+// const ascSort = prices.slice().sort((a, b) => a - b);
+// const descSort = prices.slice().sort((a, b) => b - a);
+
+const rankingAsc = books.slice().sort((a, b) => a.rating - b.rating); // we refer to exact place (rating value) in the objects of the array.
+const rankingDesc = books.slice().sort((a, b) => b.rating - a.rating);
+
+const nums = [3, 4, 5, 6, 7];
+const product = nums.reduce((total, currentVal) => {
+  return total * currentVal;
 });
 
-const fantacy = books.filter((f) => f.genres.includes('fantasy'));
-const shortForm = books.filter(
-  (short) =>
-    short.genres.includes('short stories') || short.genres.includes('essays')
-);
+const grades = [87, 64, 96, 72, 88, 99, 73, 74, 64, 52, 31];
+// const maxGrade = grades.reduce((max, currentValue) => {
+//   if (currentValue > max) return currentValue;
+//   return max;
+// });
 
-const query = 'OF';
-const results = books.filter((q) => {
-  const title = q.title.toLowerCase();
-  return title.includes(query.toLowerCase());
+const maxGrade = grades.reduce((max, currentValue) => {
+  return Math.max(max, currentValue);
 });
+
+const minGrade = grades.reduce((min, currentValue) => {
+  return Math.min(min, currentValue);
+});
+
+const votes = [
+  'y',
+  'n',
+  'y',
+  'n',
+  'y',
+  'n',
+  'y',
+  'n',
+  'y',
+  'n',
+  'y',
+  'n',
+  'y',
+  'n',
+  'y',
+];
+const results = votes.reduce((tally, val) => {
+  if (tally[val]) {
+    tally[val]++;
+  } else {
+    tally[val] = 1;
+  }
+  return tally;
+}, {});
