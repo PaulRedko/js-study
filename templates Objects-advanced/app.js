@@ -35,3 +35,13 @@ const team = {
   [role2]: person2,
   [1 + 2 + 10]: 'thirteen',
 };
+
+// Adding methods to objects
+const math = {
+  add: function (x, y) {
+    return x + y;
+  },
+  multiply: function (x, y) {
+    return x * y;
+  },
+};

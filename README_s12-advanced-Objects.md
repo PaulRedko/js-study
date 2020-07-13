@@ -58,3 +58,30 @@ computed properties use
 const team = {
 [role]: person,
 }
+
+// ADDING METHODS TO OBJECTS
+
+- we store function in arrays (need to refresh)
+- we can store function as argruments
+- we can return them from a function
+- finally we can store them in objects
+- why? the simplest reason just to store them together.
+
+EX:
+const add = function (x,y) {
+return x + y
+}
+const math = {
+add
+}
+// we can now use the method
+math.add(2,3) // this results in adding 2+ 3= 5;
+// or even more common to add functions into the function
+const math = {
+add: function(x,y){
+return x+y;
+},
+multiply: function(x,y){
+return x\*y;
+},
+}
