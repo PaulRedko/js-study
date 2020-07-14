@@ -1,34 +1,38 @@
-# about AWS Cloud Practitioner Certification 
-+ It takes 1-2 weeks to get prepared. 
-+ costs $100 / takes up to 90 min / 70% grade is a pass
+# about AWS Cloud Practitioner Certification
+
+- It takes 1-2 weeks to get prepared.
+- costs \$100 / takes up to 90 min / 70% grade is a pass
 
 Content:
+
 - cloud concepts: 28%
 - secutiry: 24%
 - technology: 36%
 - billing / pricing: 12%
 
-Types of answers: 
+Types of answers:
+
 - multiple choice and multiple response.
 
 Cloud computing
 Six advantages of cloud computing:
-1. trade capital expence for variable expense. 
-no upfront costs. Instead of paying for data centers and servers. 
-pay on-demand. Pay only when consume computing resourses. 
+
+1. trade capital expence for variable expense.
+   no upfront costs. Instead of paying for data centers and servers.
+   pay on-demand. Pay only when consume computing resourses.
 
 2. benefit from massive economies of scale. Usage from hundreded of thousands of customers aggregated in the cloud.
-You are shaing the cost with other customers to get unbeatable savings. 
+   You are shaing the cost with other customers to get unbeatable savings.
 
 3. Stop guessing capacity. Eleminate guess work about infrastructure capacity needs.
-Instead of paying for idle or underutilized servers, you can scale up and down to meet the current need. 
+   Instead of paying for idle or underutilized servers, you can scale up and down to meet the current need.
 
-4. increase speed and agility. 
-Launch resources within a few clicks in minutes instead of waiting dasy or weeks of your IT to implement the solution. 
+4. increase speed and agility.
+   Launch resources within a few clicks in minutes instead of waiting dasy or weeks of your IT to implement the solution.
 
-5. Stop spending money on running and maintaining data centers. Focus on your own customer and core works. 
+5. Stop spending money on running and maintaining data centers. Focus on your own customer and core works.
 
-6. go global in minutes. Deploy app in multiple regions around the world with a few clicks. 
+6. go global in minutes. Deploy app in multiple regions around the world with a few clicks.
 
 Types of cloud computing:
 SaaS: for customers
@@ -40,41 +44,58 @@ Cloud: fully on cloud: basecamp, Casual, Dropbox. for Startups, new projects and
 Hybrid: both cloud and on-premise. Banks, FinTech, logistics.
 On-premise: govermental and public service esp dealing with sensitive data.
 
+- AWS Global Infrastructure
+  ⌨️ (0:19:27) Introduction and Map Overview
 
-+ AWS Global Infrastructure
-⌨️ (0:19:27) Introduction and Map Overview
-- 69 Zones in 22 geographical regions. 
-- At least two AZs per geographical loation. All have different and independent supplies. 
-- US-East North Virginia is the largest region and AZ. Services become avaialbe in US-East first. 
-- billing information is in this region.
-⌨️ (0:20:30) Regions
-⌨️ (0:24:30) Availability Zones
-⌨️ (0:25:42) Edge Locations
-⌨️ (0:27:27) GovCloud Regions
+* 69 Zones in 22 geographical regions.
+* At least two AZs per geographical loation. All have different and independent supplies.
+* US-East North Virginia is the largest region and AZ. Services become avaialbe in US-East first.
+* billing information is in this region.
+  ⌨️ (0:20:30) Regions
+  ⌨️ (0:24:30) Availability Zones
+  ⌨️ (0:25:42) Edge Locations
+  ⌨️ (0:27:27) GovCloud Regions
 
-+ Getting Started
-⌨️ (0:29:20) Creating an AWS Account
-⌨️ (0:32:43) Billing Preferences, Budgets and Alarms
-+ setting alarms/notification in CloudWatch. Free tier 10 alarms and 1000 notification/m.
-+ setting in US-East(N.Virgina)   
-⌨️ (0:40:09) Change IAM Users Sign-in Link
-+ it is important to login not with a root account and create users for the team members. 
-⌨️ (0:41:14) Activate MFA on Root Account
-⌨️ (0:43:40) Create individual IAM (identity and access managment) user
-+ type of users few admins and more power users.
-⌨️ (0:48:44) Set a password policy
+- Getting Started
+  ⌨️ (0:29:20) Creating an AWS Account
+  ⌨️ (0:32:43) Billing Preferences, Budgets and Alarms
+- setting alarms/notification in CloudWatch. Free tier 10 alarms and 1000 notification/m.
+- setting in US-East(N.Virgina)  
+  ⌨️ (0:40:09) Change IAM Users Sign-in Link
+- it is important to login not with a root account and create users for the team members.
+  ⌨️ (0:41:14) Activate MFA on Root Account
+  ⌨️ (0:43:40) Create individual IAM (identity and access managment) user
+- type of users few admins and more power users.
+  ⌨️ (0:48:44) Set a password policy
 
 ☁️ Hands On
 ⌨️ (0:49:50) Intro and Regions
 ⌨️ (0:51:03) EC2
-⌨️ (0:55:36) Sessions Manager
-⌨️ (0:58:36) AMI
-⌨️ (1:00:32) Auto Scaling Groups
-⌨️ (1:07:31) Elastic Load Balancer
-⌨️ (1:12:47) S3
-⌨️ (1:14:29) CloudFront
-⌨️ (1:16:52) RDS
-⌨️ (1:22:00) Lambda
+
+- consider SSM (simple systems manager) way to connet to the instanse. It is a separate service on AWS.
+- SSM records sessions that users have.
+  ⌨️ (0:55:36) Sessions Manager
+  ⌨️ (0:58:36) AMI
+- copy or snapshot of the instance.
+- AMI (amazon machine images) allows to save image and launch the same instance easily or have a backup for scaling.
+  ⌨️ (1:00:32) Auto Scaling Groups
+- it allows to check if server capacity is enought, and scale up if not or down if necessary.
+  ⌨️ (1:07:31) Elastic Load Balancer
+
+* ELB - when traffic goes on the instance and we elastic load balancer distributes traffic evenly to prevent overload. And the will be no downtime.
+* there are three types of load balancers: application LB (https), network LB (TCP/TLS/UDP), classic LB
+
+- should run in at least two AZ
+  ⌨️ (1:12:47) S3
+- S3 is global, it does not require regions selection.
+- while buckets created are region specific.
+  ⌨️ (1:14:29) CloudFront
+- CDN (cloud distribution network) it is connected to the bucket and copy content to different locations.
+  ⌨️ (1:16:52) RDS - relational databases
+- there is free version for 7.5 hours/month
+  ⌨️ (1:22:00) Lambda
+- allows not to use server to run the code, but it runs it only for 15 min.
+- serverless computing platform
 
 ☁️ EC2 Pricing Models
 ⌨️ (1:25:28) Introduction
