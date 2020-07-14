@@ -25,23 +25,52 @@
 
 // Computed properties
 
-const role = 'host';
-const person = 'Jools Holland';
-const role2 = 'Director';
-const person2 = 'James Cameron';
+// const role = 'host';
+// const person = 'Jools Holland';
+// const role2 = 'Director';
+// const person2 = 'James Cameron';
 
-const team = {
-  [role]: person,
-  [role2]: person2,
-  [1 + 2 + 10]: 'thirteen',
-};
+// const team = {
+//   [role]: person,
+//   [role2]: person2,
+//   [1 + 2 + 10]: 'thirteen',
+// };
 
 // Adding methods to objects
-const math = {
-  add: function (x, y) {
-    return x + y;
+// const math = {
+//   add: function (x, y) {
+//     return x + y;
+//   },
+//   multiply: function (x, y) {
+//     return x * y;
+//   },
+//   devide: function (x, y) {
+//     return x / y;
+//   },
+// };
+
+// Method shorthand syntax
+// const auth = {
+//   array: [1, 3, 4, 5, 2, 5],
+//   login() {
+//     console.log('You are logged in');
+//   },
+//   logout() {
+//     console.log('Your are logged out');
+//   },
+// };
+
+const person = {
+  name: 'Cherilyn',
+  last: 'Sarkisan',
+  nickName: 'Cher',
+  fullName() {
+    const { name, last, nickName } = this;
+    return `${name} ${last} AKA ${nickName}`;
   },
-  multiply: function (x, y) {
-    return x * y;
+  printBio() {
+    console.log(`${this.fullName()} is a person`);
   },
 };
+// run function
+person.fullName(); // returns whole object back.

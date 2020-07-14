@@ -85,3 +85,50 @@ multiply: function(x,y){
 return x\*y;
 },
 }
+
+// Shorthand for adding methods into object
+
+- it is possible to add a nested function into an object with shorter syntaxis.
+- like in example below. We do not write key and word 'function'.
+- still this objects works as before.
+
+const auth = {
+array: [1, 3, 4, 5, 2, 5],
+login() {
+console.log('You are logged in');
+},
+logout() {
+console.log('Your are logged out');
+},
+};
+// run function
+auth.logout()
+auth.login() // as method
+
+// KEYWORD THIS
+
+- 'this' is a reference for current execution scope or the 'window',
+- Window is the global scope of our browser
+- when we add a function (with function declaration or var) it is added to the window object
+- but let and const do not add functions into 'window'
+- this is useful when we work with methods in the objects. it refers to the object where the method is used.
+
+EX: now we have an object with selfcontained world, values functions etc.
+const person = {
+name: 'Cherilyn',
+last: 'Sarkisan',
+nickName: 'Cher',
+fullName() {
+const { name, last, nickName } = this;
+console.log(`${name} ${last} AKA ${nickName}`);
+},
+};
+// run function
+person.fullName(); // returns whole object back.
+
+// THIS: INVOCATION CONTEXT (how you execute the code or run the function)
+
+- the value of this depends on the invocation context of the function it is used in. The value is changed based on how the function is executed.
+- if this refered to as a part of method --> person.fullName() // this will refer to the object of the function.
+- if we just use this and refer to --> person // this refers to global object which is window.
+- arrow function does not get their own version of this.
