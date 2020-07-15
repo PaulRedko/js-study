@@ -99,6 +99,13 @@ On-premise: govermental and public service esp dealing with sensitive data.
 
 ☁️ EC2 Pricing Models
 ⌨️ (1:25:28) Introduction
+4 types of EC2 pricing:
+
+- On-Demand: least commitment. Default and good for startups.
+- Spot: biggest savings. Termitation conditions - can be terminated by AWS at any time.
+- Reserved (RI): best long-term. Have commitment to use amazon and get discount. It is impossible to change instance type on standarad (max discount), convertible type up to 54%, possible to scale up. Terms: 1y, 3Y. Payment options: All upfront, Partial upfront, no upfront. it is possible to resell instance if it is prepaid for 3ys and you no longer need it.
+- Dedicated: the most expensive. It is a single-tenant server type.
+
 ⌨️ (1:25:46) On-Demand
 ⌨️ (1:26:19) Reserved
 ⌨️ (1:28:52) Spot
