@@ -1,1 +1,28 @@
 # DOM - Document Object Model
+
+- the DOM is a JS representation of a webpage
+- it is my JS window into the contents of a webpage
+- it is a bunch of objects i can interect with via JS
+- every page consists of a bunch of JS objects
+
+ex: not working, need to troubleshoot.
+const nImg = document.createElement('img');
+nImg.src ="https://images.unsplash.com/photo-1593771009063-e2a5fc81be47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=646&q=80";
+nImg.style.width = '300px'
+document.body.append(nImg);
+
+const allEls = document.body.children
+
+setInterval(() => {
+for(let el of allEls){
+const rotation = Math.floor(Math.random() _ 360);
+const x = Math.floor(document.body.clientWidth _ Math.random());
+const y = Math.floor(document.body.clientHeith \* Math.random());
+el.style.transform = `translate(${x}px,${y}px)`;
+}
+}, 2000)
+
+// The Document Object
+
+- use console.dir(document) - to see the actual document file/content.
+- document object is our entry point into the world of the DOM. It contains representation of all the content on a page, plus tons of useful methods and properties.
