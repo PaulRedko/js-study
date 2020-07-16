@@ -1,3 +1,5 @@
+# Arrays
+
 GOALS:
 Arrays
 Reference types
@@ -7,14 +9,14 @@ ARRAYS: ordered collection of values. All primitive data types are arranged in a
 examples: list of comments in a post; levels in a game; list of songs in a playlist.
 One can store different data types in array, not only strings or numbers. It can be combined.
 Array are indexed same as strings. Every data value has it number from 0 to n.
-Arran can be done with sqare brackets [] and also passed data as new Array(1,2,3,1,"didko")
+Array is declared with sqare brackets [] and also passed data as new Array(1,2,3,1,"didko")
 In comparison to the stings, arrays are mutable: they can be changed with different methods.
 
-Arrays has 11 main methods: concat, indexOf, include, push, pop, unshift, shift, length, slice, splice, join
+Arrays has 12 main methods: concat, indexOf, include, push, pop, unshift, shift, length(object), slice, splice, join, reverse, sort.
 
 EX:
 let students = ["Paul","22",14,"Sofia",null,NaN]
-students.length[0] // 'Paul'
+students.length // 'Paul'
 
 Modifyng arrays: directly, when you know array length and value places.
 let myShoppingList = ["Paper","Potato","Cheese","water"]
@@ -72,7 +74,7 @@ SORT
 is good to arrange array items(strings) by name.
 but for numbers it is not possible to use, only with the use of functions.
 
-REFERENCE TYPE VARIABLE
+// REFERENCE TYPE VARIABLE
 Value type variable - we create first when we save a primitive data type with a variable (let or const). In this case information is stored in memory, and it is only applicable for primitive data types.
 
 let nums = 45;
@@ -84,8 +86,7 @@ nums= 44
 // nums -> 44
 // otherNums ->45 - still remains the same, because the number data is stored in memory.
 
-with Array storing is different. Variable when created, does not store data in memory, it stores the link/reference to the data in memory - it is called Reference Type Variable.
-So in this case, when saving an array we save the link and reuse the link to the memory storage.
+Reference type - with Array storing is different. Variable when created, does not store data in memory, it stores the link/reference to the data in memory - it is called Reference Type Variable. So in this case, when saving an array we save the link and reuse the link to the memory storage.
 
 let nums = [45];
 let otherNums = nums;

@@ -26,3 +26,20 @@ el.style.transform = `translate(${x}px,${y}px)`;
 
 - use console.dir(document) - to see the actual document file/content.
 - document object is our entry point into the world of the DOM. It contains representation of all the content on a page, plus tons of useful methods and properties.
+
+// SELECTING
+
+- we select and manipulate, and add events to the element
+
+.getElementById('myID') // and we pass our id as a string. As a result it return ID as an HTML code. In order to get an object we can save this selection as a variable and request with console.dir(varName).
+.getElementByTagName - selecting in the same way, but we get a collection of elements, even if there is only one element in that collection. It looks as an array, but not an array. it is a collection, which allows to do with it some arrayish things. those methods allow to view and find information about the collection, but does not allow to change it. - it is possible to collect input values from the input fileds of the form by simple for of loop:
+for(let input of inputs) {console.log(input.value)} // but only before pressing Submit button, after that page reloads.
+.getElementByClassName - we do same operations with the selection of classes. The only note is that in both cases when we want to select an element within a collection, we need to specify its number in the array.
+
+- there is one element that allows to combine all other, by specifying CSS style selector in the value. It only sends us back the first match, not the collection of items as before.
+  .querySelector('h1') // select by tag. But we only get the first match. No other h1 headers if available to the page.
+  .querySelector('#red') // selecting ID
+  .querySelector('.big') // select by class
+  .querySelectorAll // this type returns all items, not only the first one as in the regular querySelector.
+  Also it return not an HTML collection but a node list. Different type.
+- it is important here to know the CSS attribute selector syntax.
