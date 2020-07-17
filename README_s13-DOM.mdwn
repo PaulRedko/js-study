@@ -76,4 +76,42 @@ firstLi.parentElement.parentElement.parentElement // it is possible to access to
 body.children[1].children[0] // it is possible to select children from the body.
 body.children[1].children[1].nextElementSibling // we move from top to bottom and in sides with nextElementSibling/previousElementSibling.
 
-// Changing several elements
+// Changing several elements - Style
+style: this property is only show if it is set up as inline code. If it is not inline, we can adjust it but initial styling is not shown on the dom request.
+EX:
+const h1 = document.querySelector('h1');
+h1.style.color // it will show inline color which is teal.
+
+- all the style properties in JS are camel cased, in contrast to CSS where they are kebab cased.
+- but this setting is not an easy way to use for multiple style changes.
+- how to use a loop? Ex:
+
+const liS = document.querySelectorAll('li');
+const colors = ['red', 'yellow', 'blue'];
+liS.forEach((li, i) => {
+const color = colors[i];
+li.style.color = color;
+});
+
+- inline styles which are populated with DOM are extremly specific, so the win on other things.
+
+// getComputedStyle - Style values - part 2
+
+- to get the value we need first to have two variables. First for the element, second for the computed style.
+  const h1 = document.querySelector('h1');
+  const compStyle = document.getComputedStyle(h1); // here is it not a string, it is a variable.
+
+- getComputedStyles(var) - is the best way to know the real value of styling settings. Which styling wins. There is a part from CSS or inline.
+
+// Manipulating Classes
+we have selected the class 'todo':
+const todo = document.querySelector('#todos .todo');
+and we want to apply to it a new style marked as class 'done'.
+todo.getAttribute('class') // 'todo'
+todo.setAttribute('class' 'done') // the element which had this class applied changed styling from todo > done.
+however it has got changed whole, and lost previous styling.
+it is possible to apply two classes and it works:
+todo.setAttribute('class' 'todo done')
+todo.classList // a new element that contains classes applied to the element and also it list the methods we can apply to it.
+if we want to remove certain styling for an element, we name variable, classList property and apply method remove, and add the style we want to remove.  
+todo.classList.remove('done');

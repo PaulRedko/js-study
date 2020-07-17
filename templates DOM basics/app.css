@@ -7,6 +7,17 @@ h1 {
   width: 500px;
 }
 
+.todo {
+  color: olive;
+  font-size: 30px;
+}
+
+.done {
+  color: gray;
+  opacity: 50;
+  text-decoration: line-through;
+}
+
 .special {
   border: 1px solit teal;
   font-size: 30px;
