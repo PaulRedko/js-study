@@ -27,7 +27,7 @@ el.style.transform = `translate(${x}px,${y}px)`;
 - use console.dir(document) - to see the actual document file/content.
 - document object is our entry point into the world of the DOM. It contains representation of all the content on a page, plus tons of useful methods and properties.
 
-// SELECTING
+// SELECTING ELEMENTS
 
 - we select and manipulate, and add events to the element
 
@@ -43,3 +43,37 @@ for(let input of inputs) {console.log(input.value)} // but only before pressing 
   .querySelectorAll // this type returns all items, not only the first one as in the regular querySelector.
   Also it return not an HTML collection but a node list. Different type.
 - it is important here to know the CSS attribute selector syntax.
+
+// MANIPULATING ELEMENTS
+
+- usually it is more about accessing.
+
+18 most used properties and methods for manipulation
+
+.innerText: returns a string-content of the selected element.
+ex:
+document.body.innerText - returns texts for whole body. It is possible to change the text in console and it changes back on the reload. However it is possible to save script which will launch on page load.
+
+.textContent - returns texts and spripted texts too.
+.innerHTML - allows to get HTML text and even adjust it, but it should be one line in the console.
+
+- it is also possible to add text to existing text. with the use of +=. EX: h1.innerText += " is cool" // h1: My website is cool.
+
+// value, checked, placeholder, src, href
+
+- those attributes work in the same way as above. it is possible to change them with a DOM.
+
+// Selecting one of the attributes
+const range = document.querySelector('input[type="range"]')
+range.getAttribute('type') // we get what is the value of the attibute.
+range.setAttribute)('type','checkbox') // we can set the attribute or change it.
+
+// parentElement, children, nextSibling, previousSibling
+
+const firstLi = document.querySelector('li');
+firstLi.parentElement // whole ul.
+firstLi.parentElement.parentElement.parentElement // it is possible to access top elements this way till we get to html element.
+body.children[1].children[0] // it is possible to select children from the body.
+body.children[1].children[1].nextElementSibling // we move from top to bottom and in sides with nextElementSibling/previousElementSibling.
+
+// Changing several elements
