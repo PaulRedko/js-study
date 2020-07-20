@@ -5,6 +5,9 @@
 - it is a bunch of objects i can interect with via JS
 - every page consists of a bunch of JS objects
 
+Most important properties and methods:
+innerText, textContent, innerHTML, value, parentElement, children, nextSibling, previousSibling, style, classList, getAttribute(), setAttribute(), appendChild(), append(), prepend(), removeChild(), remove, createElement
+
 ex: not working, need to troubleshoot.
 const nImg = document.createElement('img');
 nImg.src ="https://images.unsplash.com/photo-1593771009063-e2a5fc81be47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=646&q=80";
@@ -101,7 +104,7 @@ li.style.color = color;
   const h1 = document.querySelector('h1');
   const compStyle = document.getComputedStyle(h1); // here is it not a string, it is a variable.
 
-- getComputedStyles(var) - is the best way to know the real value of styling settings. Which styling wins. There is a part from CSS or inline.
+- getComputedStyles(var) - Computed means that part of the stiles comes from CSS file, some from JS with hovers. So the styles are final and computed too. It is the best way to know the real value of styling settings. Which styling wins. There is a part from CSS or inline.
 
 // Manipulating Classes
 we have selected the class 'todo':
@@ -112,6 +115,19 @@ todo.setAttribute('class' 'done') // the element which had this class applied ch
 however it has got changed whole, and lost previous styling.
 it is possible to apply two classes and it works:
 todo.setAttribute('class' 'todo done')
+
 todo.classList // a new element that contains classes applied to the element and also it list the methods we can apply to it.
 if we want to remove certain styling for an element, we name variable, classList property and apply method remove, and add the style we want to remove.  
 todo.classList.remove('done');
+classList property and its methods are good to change the class styling, one time for many.
+
+// Creating Elements
+to create an element we use property .createElement('name'). If we want to also pass some text into the element, we need to pass it separatly.
+const newH2 = document.createElement('h2');// <h2></h2>
+console.dir(newH2);
+newH2.innerText = 'New and great heading'
+style is added in a similar way:
+newH2.classList.add('special')
+
+but how to position the element? to do this we use properties appendChild. We want to add this element into the section in html. We firstly pass value of section as a variable and after that...
+section.appendChild(newH2); // element should add to the end of list.
