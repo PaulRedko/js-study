@@ -19,5 +19,14 @@ newH2.textContent = 'My best day and week in life';
 // apply styles
 newH2.classList.add('special');
 // place on the page with append or prepend
-const sect = document.querySelector('section');
-sect.appendChild(newH2);
+const frm = document.querySelector('form');
+frm.appendChild(newH2);
+
+const imag = document.createElement('img');
+// https://images.unsplash.com/photo-1529245814698-dd66c442bfef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+
+imag.src =
+  'https://images.unsplash.com/photo-1529245814698-dd66c442bfef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80';
+
+const ul = document.querySelector('ul');
+ul.prepend(imag);
