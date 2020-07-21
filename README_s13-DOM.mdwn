@@ -131,3 +131,33 @@ newH2.classList.add('special')
 
 but how to position the element? to do this we use properties appendChild. We want to add this element into the section in html. We firstly pass value of section as a variable and after that...
 section.appendChild(newH2); // element should add to the end of list.
+parentUL.insertBefore(newH2, firstLI); // element can be added to the center of the list. However we need to select the element and the element before.
+
+Element.incertAjacentElement() >> TargetElement.incertAjacentElement(position, element)
+EX:
+const prag = document.querySelectorAll('p')[1]
+const i = document.createElement('i');
+i.innerText = "I AM ITALICS "
+prag.insertAdjacentElement('beforeend',i) // or
+prag.insertAdjacentElement('aftereend',i)
+
+append() prepend() / newer methods, not supported in IE.
+append() - it is possible to insert several elements with this method.
+ex:
+prag.prepend(i,newH2) // both of them can insert two or more elements. While appendChild() can only do one element.
+prag.append(i,newH2)
+
+//remove(), removeChild() methods
+remove() - newer, not supported in IE. We set wariable before the method h1.remove().
+removeChild() - older, supports IE. it requires to specify parent node before: ui.removeChild(ul) / document.body.removeChild(h1).
+if to remove h1:
+
+1.
+
+const h1 = document.querySelector('h1') // we specify element
+h1.remove()
+
+2.
+
+const h1 = document.querySelector('h1') // we specify element
+document.body.removeChild(h1)
