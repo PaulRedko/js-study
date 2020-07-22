@@ -59,7 +59,7 @@ btn.addEventListener('mouseout', function () {
 btn.innerText = 'Clicker!';
 });
 
-- scroll event support two types:
+- scroll event support two types (one element (button) and multiple event listners):
 
 1. scroll on the page
 2. scroll on the element
@@ -67,3 +67,5 @@ btn.innerText = 'Clicker!';
    window.addEventListener('scroll', function () {
    alert('Stop Scrolling!!');
    });
+
+// event listeners attached to multiple elements
