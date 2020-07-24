@@ -8,10 +8,11 @@
 Most important properties and methods:
 innerText, textContent, innerHTML, value, parentElement, children, nextSibling, previousSibling, style, classList, getAttribute(), setAttribute(), appendChild(), append(), prepend(), removeChild(), remove, createElement
 
-ex: not working, need to troubleshoot.
+ex:
 const nImg = document.createElement('img');
-nImg.src ="https://images.unsplash.com/photo-1593771009063-e2a5fc81be47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=646&q=80";
-nImg.style.width = '300px'
+nImg.src =
+'https://images.unsplash.com/photo-1593771009063-e2a5fc81be47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=646&q=80';
+nImg.style.width = '300px';
 document.body.append(nImg);
 
 const allEls = document.body.children
@@ -34,31 +35,33 @@ el.style.transform = `translate(${x}px,${y}px)`;
 
 - we select and manipulate, and add events to the element
 
-.getElementById('myID') // and we pass our id as a string. As a result it return ID as an HTML code. In order to get an object we can save this selection as a variable and request with console.dir(varName).
-.getElementByTagName - selecting in the same way, but we get a collection of elements, even if there is only one element in that collection. It looks as an array, but not an array. it is a collection, which allows to do with it some arrayish things. those methods allow to view and find information about the collection, but does not allow to change it. - it is possible to collect input values from the input fileds of the form by simple for of loop:
-for(let input of inputs) {console.log(input.value)} // but only before pressing Submit button, after that page reloads.
-.getElementByClassName - we do same operations with the selection of classes. The only note is that in both cases when we want to select an element within a collection, we need to specify its number in the array.
+  document.getElementById('myID') // and we pass our id as a string. As a result it return ID as an HTML code. In order to get an object we can save this selection as a variable and request with console.dir(varName).
+
+  document.getElementByTagName - selecting in the same way, but we get a collection of elements, even if there is only one element in that collection. It looks as an array, but not an array. it is a collection, which allows to do with it some arrayish things. those methods allow to view and find information about the collection, but does not allow to change it. - it is possible to collect input values from the input fileds of the form by simple for of loop:
+  for(let input of inputs) {console.log(input.value)} // but only before pressing Submit button, after that page reloads.
+
+  document.getElementByClassName - we do same operations with the selection of classes. The only note is that in both cases when we want to select an element within a collection, we need to specify its number in the array.
 
 - there is one element that allows to combine all other, by specifying CSS style selector in the value. It only sends us back the first match, not the collection of items as before.
-  .querySelector('h1') // select by tag. But we only get the first match. No other h1 headers if available to the page.
-  .querySelector('#red') // selecting ID
-  .querySelector('.big') // select by class
-  .querySelectorAll // this type returns all items, not only the first one as in the regular querySelector.
+
+  document.querySelector('h1') // select by tag. But we only get the first match. No other h1 headers if available to the page.
+  document.querySelector('#red') // selecting ID
+  document.querySelector('.big') // select by class
+  document.querySelectorAll // this type returns all items, not only the first one as in the regular querySelector.
   Also it return not an HTML collection but a node list. Different type.
-- it is important here to know the CSS attribute selector syntax.
+
+- it is important here to know the CSS attribute selector syntax: 'tag', '#id', '.class'.
 
 // MANIPULATING ELEMENTS
 
-- usually it is more about accessing.
+- usually it is more about accessing - 18 most used properties and methods for manipulation.
 
-18 most used properties and methods for manipulation
+  <element>.innerText: returns a string-content of the selected element.
+  ex:
+  document.body.innerText - returns texts for whole body. It is possible to change the text in console and it changes back on the reload. However it is possible to save script which will launch on page load.
 
-.innerText: returns a string-content of the selected element.
-ex:
-document.body.innerText - returns texts for whole body. It is possible to change the text in console and it changes back on the reload. However it is possible to save script which will launch on page load.
-
-.textContent - returns texts and spripted texts too.
-.innerHTML - allows to get HTML text and even adjust it, but it should be one line in the console.
+  <box>.textContent - returns texts and scripted texts too.
+  <li>.innerHTML - allows to get HTML text and even adjust it, but it should be one line in the console.
 
 - it is also possible to add text to existing text. with the use of +=. EX: h1.innerText += " is cool" // h1: My website is cool.
 
@@ -66,37 +69,37 @@ document.body.innerText - returns texts for whole body. It is possible to change
 
 - those attributes work in the same way as above. it is possible to change them with a DOM.
 
-// Selecting one of the attributes
-const range = document.querySelector('input[type="range"]')
-range.getAttribute('type') // we get what is the value of the attibute.
-range.setAttribute)('type','checkbox') // we can set the attribute or change it.
+- selecting one of the attributes
+  const range = document.querySelector('input[type="range"]')
+  range.getAttribute('type') // we get what is the value of the attibute.
+  range.setAttribute)('type','checkbox') // we can set the attribute or change it.
 
-// parentElement, children, nextSibling, previousSibling
+- parentElement, children, nextSibling, previousSibling:
 
-const firstLi = document.querySelector('li');
-firstLi.parentElement // whole ul.
-firstLi.parentElement.parentElement.parentElement // it is possible to access top elements this way till we get to html element.
-body.children[1].children[0] // it is possible to select children from the body.
-body.children[1].children[1].nextElementSibling // we move from top to bottom and in sides with nextElementSibling/previousElementSibling.
+  const firstLi = document.querySelector('li');
+  firstLi.parentElement.innerHTML = 'what do you want?' // whole ul.
+  firstLi.parentElement.parentElement.parentElement // it is possible to access top elements this way till we get to html element.
+  body.children[1].children[0] // it is possible to select children from the body.
+  body.children[1].children[1].nextElementSibling.innerText = 'all if fine' // we move from top to bottom and in sides with nextElementSibling/previousElementSibling.
 
-// Changing several elements - Style
-style: this property is only show if it is set up as inline code. If it is not inline, we can adjust it but initial styling is not shown on the dom request.
-EX:
-const h1 = document.querySelector('h1');
-h1.style.color // it will show inline color which is teal.
+- Changing several elements Style
+  style: this property is only show if it is set up as inline code. If it is not inline, we can adjust it but initial styling is not shown on the dom request.
+  EX:
+  const h1 = document.querySelector('h1');
+  h1.style.color // it will show inline color which is teal.
 
-- all the style properties in JS are camel cased, in contrast to CSS where they are kebab cased.
-- but this setting is not an easy way to use for multiple style changes.
-- how to use a loop? Ex:
+      - all the style properties in JS are camel cased, in contrast to CSS where they are kebab cased.
+      - but this setting is not an easy way to use for multiple style changes.
+      - how to use a loop? Ex:
 
-const liS = document.querySelectorAll('li');
-const colors = ['red', 'yellow', 'blue'];
-liS.forEach((li, i) => {
-const color = colors[i];
-li.style.color = color;
-});
+            const liS = document.querySelectorAll('li');
+            const colors = ['red', 'yellow', 'blue'];
+            liS.forEach((li, i) => {
+            const color = colors[i];
+            li.style.color = color;
+            });
 
-- inline styles which are populated with DOM are extremly specific, so the win on other things.
+      - inline styles which are populated with DOM are extremly specific, so the win on other things.
 
 // getComputedStyle - Style values - part 2
 
