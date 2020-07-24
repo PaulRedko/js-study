@@ -8,3 +8,7 @@
   height: 200px;
   width: 200px;
 }
+
+h1 {
+  align-items: center;
+}
