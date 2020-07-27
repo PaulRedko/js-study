@@ -16,10 +16,13 @@ function calculate() {
 }
 
 const form = document.querySelector('#calcForm');
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  form.onsubmit = calculate;
-});
+form.addEventListener('submit', calculate(e));
+e.preventDefault();
+
+// function (e) {
+//   e.preventDefault();
+//   form.onsubmit = calculate();
+// });
 
 // SUGGESTED SOLUTION
 
