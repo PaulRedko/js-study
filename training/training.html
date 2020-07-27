@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Order total calculator</title>
+
+    <h1>Calculate order total</h1>
+
+    <form action="" id="calcForm">
+      <label for="qantity">Quantity</label><br /><input
+        type="number"
+        value="1"
+        min="1"
+        name="quantity"
+        id="quantity"
+      /><br />
+
+      <label for="price">Price</label><br /><input
+        type="number"
+        name="price"
+        id="price"
+        value="1"
+        required
+      /><br />
+
+      <label for="tax">Tax Rate, %</label><br /><input
+        type="number"
+        name="tax"
+        id="tax"
+        value="0.0"
+        required
+      /><br />
+
+      <label for="discount">Discount</label><br /><input
+        type="number"
+        name="discount"
+        id="discount"
+        value="0.0"
+        required
+      /><br />
+
+      <label for="total">Total</label><br /><input
+        type="number"
+        name="total"
+        id="total"
+      /><br /><br />
+
+      <input type="submit" value="Calculate" id="submit" /><br />
+    </form>
+    <script src="training.js"></script>
+  </head>
+  <body></body>
+</html>
