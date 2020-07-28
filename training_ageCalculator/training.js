@@ -2,7 +2,7 @@
 
 let age = prompt('What is your age?');
 // let currentDate = Date
-let ageInDays = age * 365;
+let ageInDays = age * 365.25;
 // let todayDate = Date.UTC();
 let today = new Date();
 let year = today.getFullYear();
