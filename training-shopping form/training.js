@@ -1,6 +1,6 @@
 // OWN SOLUTION
 
-function calculate() {
+function calculate(e) {
   let total;
   let quantity = document.querySelector('#quantity').value;
   let price = document.querySelector('#price').value;
@@ -13,18 +13,18 @@ function calculate() {
   total *= tax;
   total = total - discount;
   document.querySelector('#total').value = total;
+  e.preventDefault();
 }
 
 const form = document.querySelector('#calcForm');
-form.addEventListener('submit', calculate(e));
-e.preventDefault();
+form.addEventListener('submit', calculate);
 
 // function (e) {
 //   e.preventDefault();
 //   form.onsubmit = calculate();
 // });
 
-// SUGGESTED SOLUTION
+// SUGGESTED SOLUTION from the book
 
 // function calculate() {
 //   'use strict';
