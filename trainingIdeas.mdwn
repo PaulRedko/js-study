@@ -1,0 +1,8 @@
+// training ideas
+
+1. teletext app: one puts the text into the window, sets speed and whole screen shows teletext
+2. calculator for shopping invoice
+3. form with a char counter(100 chars max)
+4. form with name concat
+5. js stalker exersize
+6. Annoyomatic app based on loops
