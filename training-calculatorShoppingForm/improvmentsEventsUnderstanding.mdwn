@@ -1,0 +1,32 @@
+// ABOUT EVENT LISTENER
+
+addEventListener() interface accepts a callback function as the second argument.
+
+form.addEventListener("submit", callbackFunction);
+
+This callback function responds to an event it listens for.
+By default, the callback function also accepts a single argument - the event object.
+
+This provides information about the event that has occured as well as the target element on which the event took place.
+
+So, RE "where and how in this case to put function that prevents page reload: e.preventDefault(); ?"
+
+you could have used the calculate function as the callback directly, passing it the event object.
+
+This
+
+form.addEventListener("submit", calculate);
+
+function calculate(event) {
+event.preventDefault();
+..... more code below.....
+}
+
+// IMPROVEMENT - PRACTICE IDEAS
+
+On the surface, calculator app may appear simple. Nevertheless, the app itself contains features that require a deeper thought-process activity to take place.
+
+1 - Number Range Support (inclusion /exclusion of bigInt type? )
+2 - Precise parsing strategy of user-entered data (type coercion )
+3- precise arithmetic - can cause headaches, especially with larger numbers)
+4- Event Handling (responding to clicks , form submissions etc...)
