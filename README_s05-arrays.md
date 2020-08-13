@@ -28,7 +28,7 @@ myShoppingList(myShoppingList.length) = 'milk'
 
 Array methods:
 push() - add value to the end
-pop() - remove value from the end. If i remove all items, and the array becomes empty, it return undefined. one do not need to specify the item, it just removes the last one.
+pop() - remove value from the end. If I remove all items, and the array becomes empty, it return undefined. one do not need to specify the item, it just removes the last one.
 unshift() - add value to the start. if several values are added, we get the list at the start, in a different way if we add the values separately.
 shift() - remove value from the start
 
@@ -47,12 +47,14 @@ let array3 = array1.concat(array2)
 includes() - method returns true or false if the value is present in the array
 ex: array3.includes("Paul") // true
 array3.includes("Paul",5) // false, because Paul is on place #4 and after 5 there is no Paul.
+
 indexOf() - search for a value and return the index where it is. If it is not present, returns -1. In the same way it can search after the specifed index.
 
 join() - combines all elements of the array into one single string. However it does not change the array itself. it is possible to join items with some symbol specified in brackets.
+
 reverse() - returns same array in a back order, and actually changes the order in array.
 
-slice - takes a portion of an array and creats a new array. But it does not delete the values in the initial array. We can use negative numbers to splice in reverse.
+slice(start, stop) - takes a portion of an array and creats a new array. But it does not delete the values in the initial array. We can use negative numbers to splice in reverse.
 ex: let shopping = array3.slice(0,4)
 
 splice(startItem, deletCount, "insert item") - adds, inserts, removes, updates elements. usually in the middle of an array.
@@ -71,7 +73,7 @@ let animals = ["shark", "salmon", "whale", "bear", "lizard","tortoise"];
 animals.splice(5,1,"tiger","aligator");
 
 SORT
-is good to arrange array items(strings) by name.
+sort() - is good to arrange array items(strings) by name.
 but for numbers it is not possible to use, only with the use of functions.
 
 // REFERENCE TYPE VARIABLE
