@@ -39,21 +39,21 @@
 
 //4// max - didnt know what to do. especially in equation with max = arr[i];
 //solution 1
-function max(arr) {
-  let max = arr[0];
-  arr.forEach(function (i) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  });
-  // solution 2
-  // for (let i = 1; i < arr.length; i++) {
-  //   if (arr[i] > max) {
-  //     max = arr[i];
-  //   }
-  // }
-  return max;
-}
+// function max(arr) {
+//   let max = arr[0];
+//   arr.forEach(function (i) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   });
+//   // solution 2
+//   // for (let i = 1; i < arr.length; i++) {
+//   //   if (arr[i] > max) {
+//   //     max = arr[i];
+//   //   }
+//   // }
+//   return max;
+// }
 
 // let animals = ["shark", "salmon", "whale", "bear", "lizard","tortoise"];
 // animals.splice(5,1,"tiger","aligator");
@@ -95,3 +95,12 @@ function max(arr) {
 // //apparently some people call male deer 'harts'.  idk.
 
 // animalPairs[2].splice(1, 0, "peafowl")
+
+let arr2 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+function myForEach(arr, func) {
+  // loop through the array
+  for (let i = 0; i < arr.length; i++) {
+    // execute function
+    func(arr[i]);
+  }
+}
