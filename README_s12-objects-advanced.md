@@ -1,6 +1,6 @@
 # Objects
 
-secret life of objects:
+the secret life of objects:
 
 - add methods to objects
 - use new object shorthand
@@ -8,7 +8,7 @@ secret life of objects:
 - understand prototype
 - explaing how the fuck this works
 
-// SHORTHAND SYNTACX
+// SHORTHAND SYNTAX
 
 - when we combine an object from several calculated variables we can create array but input only variable names. They will automatically create same names for the keys and provide calculated valuse.
 

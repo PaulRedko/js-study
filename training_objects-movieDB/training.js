@@ -72,3 +72,24 @@ const obj = {
     return x + y;
   },
 };
+
+// how to make a function where I pass two arguments and it does all methods from the objects?
+// const math = {
+//   add: function (x, y) {
+//     return x + y;
+//   },
+//   multiply: function (x, y) {
+//     return x * y;
+//   },
+//   devide: function (x, y) {
+//     return x / y;
+//   },
+//   substract: function (x, y) {
+//     return x - y;
+//   },
+// };
+// function doMath(x, y) {
+//   for (const impl in math) {
+//     console.log(math.impl());
+//   }
+// }
